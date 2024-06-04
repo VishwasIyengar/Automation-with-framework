@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -79,8 +78,8 @@ public class AmazonIPhonePurchaseTest
         WebElement mobileNumberInput = driver.findElement(By.xpath("(//input[@id='address-ui-widgets-enterAddressPhoneNumber'])[1]"));
         mobileNumberInput.sendKeys("6361797204");
         
-     //   WebElement postalCodeInput =  driver.findElement(By.xpath("(//input[@id='address-ui-widgets-enterAddressPostalCode'])[1]"));
-     //   postalCodeInput.sendKeys("560072");
+        WebElement postalCodeInput =  driver.findElement(By.xpath("(//input[@id='address-ui-widgets-enterAddressPostalCode'])[1]"));
+        postalCodeInput.sendKeys("560072");
         
         WebElement flatHousenoBuildingCompanyApartmentInput =  driver.findElement(By.xpath("(//input[@id='address-ui-widgets-enterAddressLine1'])[1]"));
         flatHousenoBuildingCompanyApartmentInput.sendKeys("#20/21 Sri KrishnaVenu");
