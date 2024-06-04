@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -90,11 +91,11 @@ public class AmazonIPhonePurchaseTest
         WebElement landMark = driver.findElement(By.xpath("(//input[@id='address-ui-widgets-landmark'])[1]"));	
         landMark.sendKeys("Beside Deffodil Kid Center");
         
-       // WebElement City  = driver.findElement(By.xpath("(//input[@id='address-ui-widgets-enterAddressCity'])[1]"));
-     //   City.sendKeys("BENGALURU");
-        WebElement stateDropdown = driver.findElement(By.xpath("(//span[contains(text(),'KARNATAKA')])[1]"));
+       WebElement City  = driver.findElement(By.xpath("(//input[@id='address-ui-widgets-enterAddressCity'])[1]"));
+       City.sendKeys("BENGALURU");
+        WebElement stateDropdown = driver.findElement(By.xpath("(//span[@role='button'])[2]"));
         stateDropdown.click(); // Assuming it's a custom dropdown that opens on click  
-        WebElement karnatakaOption = driver.findElement(By.xpath("(//span[contains(text(),'KARNATAKA')])[1]"));
+        WebElement karnatakaOption = driver.findElement(By.xpath("(//a[normalize-space()='KARNATAKA'])[1]"));
         try 
          {
         	karnatakaOption.click();
